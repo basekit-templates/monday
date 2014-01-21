@@ -1,0 +1,118 @@
+@import "../common/basekit-bootstrap.less";
+
+@color-swatch1: #647172; // Background colour
+@color-swatch2: #3b8288; // Accent colour
+@color-swatch3: #336366; // Dark accent colour
+@color-swatch4: #c2c8c6; // Light accent colour
+@color-swatch5: #666666; // Copy colour
+@color-swatch6: #ffffff; // Block background colour
+@color-swatch7: #596565; // Block shadow colour
+
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-size: 12px;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+ }
+// Structure
+.header, .article {
+	padding: 20px;
+	margin-top: 30px;
+	background: @color-swatch6;
+	box-shadow: 10px 10px 0 @color-swatch7;
+	float: left;
+}
+.container {
+	max-width: 940px;
+	margin: 0 auto;
+}
+.header {
+	width: 300px;
+	margin-right: 20px;
+	position: fixed;
+	.logo-title {
+		text-align: center;
+		img {
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			border: 2px solid @color-swatch2;
+			margin-top: -40px;
+		}
+	}
+}
+.section {
+	float: left;
+	width: 620px;
+	margin-left: 320px;
+}
+// Globals
+a {
+	color: @color-swatch2;
+}
+// Navigation
+.nav {
+	li {
+		border-bottom: 1px solid @color-swatch4;
+	}
+	a {
+		font-family: @font-swatch1-font-family;
+		font-size: 1.2em;
+		font-weight: 400;
+		line-height: 2em;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+}
+.social {
+	padding-top: 1em;
+	a {
+		padding: .2em;
+		display: inline-block;
+	}
+}
+// Type
+h1 {
+	color: @color-swatch2;
+	font-weight: 400;
+}
+h2, h2 a {
+	font-family: @font-swatch1-font-family;
+}
+h2 a {
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+h3 {
+	font-family: @font-swatch4-font-family;
+	color: @color-swatch3;
+	font-size: 1.2em;
+	font-weight: 400;
+	padding-bottom: .1em;
+}
+h4 {
+}
+h5 {
+	
+}
+h6 {
+	
+}
+p {
+	font-size: 1em;
+	font-weight: 300;
+	text-shadow: 0 1px 1px fadeout(@color-swatch4, 50%);
+}
+
+// Design specific
+
+// Reponsive
+
