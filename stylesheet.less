@@ -1,5 +1,10 @@
 @import "../common/basekit-bootstrap.less";
 
+// Flynn grid
+@import "flynn/reset.less";
+@import "flynn/grid.less";
+//@import "flynn/type.less";
+
 @color-swatch1: #647172; // Background colour
 @color-swatch2: #3b8288; // Accent colour
 @color-swatch3: #336366; // Dark accent colour
@@ -8,8 +13,8 @@
 @color-swatch6: #ffffff; // Block background colour
 @color-swatch7: #596565; // Block shadow colour
 
-
 body {
+	font-family: @font-swatch4-font-family;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-size: 12px;
@@ -18,7 +23,8 @@ body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
- }
+}
+
 // Structure
 .header, .article {
 	padding: 20px;
@@ -27,14 +33,7 @@ body {
 	box-shadow: 10px 10px 0 @color-swatch7;
 	float: left;
 }
-.container {
-	max-width: 940px;
-	margin: 0 auto;
-}
 .header {
-	width: 300px;
-	margin-right: 20px;
-	position: fixed;
 	.logo-title {
 		text-align: center;
 		img {
@@ -46,19 +45,51 @@ body {
 		}
 	}
 }
-.section {
-	float: left;
-	width: 620px;
-	margin-left: 320px;
+.footer {
+	clear: both;
+	text-align: center;
+	> p a {
+		color: @color-swatch6;
+		font-size: 1.2em;
+		text-shadow: 0 1px 0 @color-swatch7;
+	}
+	small a {
+		color: @color-swatch1;
+		font-size: inherit;
+	}
+	p {
+		color: @color-swatch4;
+		text-shadow: 0 1px 0 @color-swatch7;
+	}
+}
+.article {
+	position: relative;
+	overflow: hidden;
+	padding-right: 440px;	
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 }
 // Globals
 a {
 	color: @color-swatch2;
 }
+.left {
+	text-align: left;
+	float: left;
+}
+.right {
+	text-align: right;
+	float: right;
+}
 // Navigation
 .nav {
+	margin-bottom: 1em;
 	li {
 		border-bottom: 1px solid @color-swatch4;
+		margin-left: 0;
 	}
 	a {
 		font-family: @font-swatch1-font-family;
@@ -68,7 +99,6 @@ a {
 	}
 	ul {
 		list-style: none;
-		padding-left: 0;
 	}
 }
 .social {
@@ -106,13 +136,35 @@ h5 {
 h6 {
 	
 }
-p {
+p, small {
 	font-size: 1em;
 	font-weight: 300;
 	text-shadow: 0 1px 1px fadeout(@color-swatch4, 50%);
 }
-
+small {
+	font-size: .8em;
+	color: @color-swatch4;
+	text-shadow: none;
+}
 // Design specific
 
 // Reponsive
-
+@media (max-width: 767px) {
+	.left, .right {
+		text-align: left;
+		float: none;
+	}
+	.footer {
+		> p a {
+			margin: 0 1em;
+		}
+	}
+	.article {
+		padding: 20px;
+		img {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
