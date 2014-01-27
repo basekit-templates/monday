@@ -42,7 +42,7 @@ body {
 		}
 	}
 }
-.footer {
+.footer, .blog-post-category {
 	clear: both;
 	text-align: center;
 	> p a {
@@ -57,6 +57,14 @@ body {
 	p {
 		color: @color-swatch4;
 		text-shadow: 0 1px 0 @color-swatch7;
+		display: inline;
+	}
+	a {
+		font-size: inherit;
+	}
+	.blog-post-publish-date, .blog-post-published-date {
+		float: right;
+		color: @color-swatch4;
 	}
 }
 .article {
