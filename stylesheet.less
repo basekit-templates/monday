@@ -94,7 +94,7 @@ body {
 }
 .blog-post-item, .blogpost-page {
 	&.has-image {
-		.blog-post-content, .blog-post-body {
+		.blog-post-content, .blog-post-body, h2 {
 			padding-right: 45%;
 		}
 		.blog-post-publish-date, .blog-post-published-date {
@@ -206,10 +206,13 @@ h1, .widget.companyname a {
 h2, h2 a {
 	font-family: @font-swatch1-font-family;
 }
-h2 a {
+h2 {
 	font-size: 1.5em;
 	font-weight: 400;
 	line-height: 1.4em;
+	a {
+		font-size: inherit;
+	}
 }
 h3 {
 	font-family: @font-swatch4-font-family;
@@ -247,6 +250,19 @@ small {
 			position: relative;
 			display: block;
 			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.blog-post-feature-image-wrap {
+		display: none;
+	}
+	.blog-post-item, .blogpost-page {
+		&.has-image {
+			.blog-post-content, .blog-post-body, h2 {
+				padding-right: 0;
+			}
 		}
 	}
 }
