@@ -70,11 +70,13 @@ body {
 	}
 }
 .blog-post-tags {
+	ol {
+		font-size: inherit;
+	}
 	p, ol {
 		display: inline;
 		li {
 			margin-left: 0;
-			font-size: inherit;
 			&:after {
 				color: @color-swatch4;
 				content: ",";
@@ -84,6 +86,30 @@ body {
 			}
 		}
 	}
+}
+.blog-post-content {
+	padding-right: 40%;
+}
+.blog-post-feature-image-wrap {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 40%;
+	height: 110%;
+	background-size: cover;
+	img {
+		display: none;
+	}
+}
+.bloglist-page {
+	.blog-post-content {
+		padding-right: 45%;
+	}
+	.blog-post-publish-date, .blog-post-published-date {
+		text-shadow: 0 1px 0 @color-swatch7;
+		background: @color-swatch6;
+	}
+
 }
 .article {
 	position: relative;
