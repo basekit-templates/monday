@@ -27,8 +27,8 @@ body {
 
 // Structure
 .header, .article {
-	//padding: 20px;
-	//margin-top: 30px;
+	padding: 20px;
+	margin-top: 30px;
 	background: @color-swatch6;
 	box-shadow: 10px 10px 0 @color-swatch7;
 	float: left;
@@ -87,18 +87,44 @@ a {
 // Navigation
 .nav {
 	margin-bottom: 1em;
-	li {
+	li, .widget .extendednavigation ul.align-left li {
 		border-bottom: 1px solid @color-swatch4;
 		margin-left: 0;
+		float: none;
+		width: 100%;
+		background: none;
 	}
-	a {
+	
+	a, .widget .extendednavigation ul li .text {
 		font-family: @font-swatch1-font-family;
 		font-size: 1.2em;
 		font-weight: 400;
 		line-height: 2em;
+		color: @color-swatch1;
 	}
-	ul {
+	ul, .widget .extendednavigation ul {
 		list-style: none;
+		float: none;
+		overflow: hidden;
+	}
+	// Dropdown
+	li ul, .widget .extendednavigation ul.align-left li ul {
+		position: relative;
+		display: block;
+		//height: 0;
+		-webkit-transition: .2s;
+		transition: .2s;
+		-moz-transition: .2s;
+		li {
+			padding-left: 1em;
+			border-bottom: none;
+			border-top: 1px solid @color-swatch4;
+			background: fadeout(@color-swatch4, 85%);
+		}
+	}
+	.widget .extendednavigation ul.align-left li:hover ul {
+		min-height: 60px;
+		height: auto;
 	}
 }
 .social {
