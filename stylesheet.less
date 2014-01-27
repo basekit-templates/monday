@@ -42,7 +42,7 @@ body {
 		}
 	}
 }
-.footer, .blog-post-category {
+.footer {
 	clear: both;
 	text-align: center;
 	> p a {
@@ -57,14 +57,32 @@ body {
 	p {
 		color: @color-swatch4;
 		text-shadow: 0 1px 0 @color-swatch7;
-		display: inline;
 	}
+}
+.blog-post-publish-date, .blog-post-published-date {
+	float: right;
+	color: @color-swatch4;
+}
+.blog-post-category p {
+	display: inline;
 	a {
 		font-size: inherit;
 	}
-	.blog-post-publish-date, .blog-post-published-date {
-		float: right;
-		color: @color-swatch4;
+}
+.blog-post-tags {
+	p, ol {
+		display: inline;
+		li {
+			margin-left: 0;
+			font-size: inherit;
+			&:after {
+				color: @color-swatch4;
+				content: ",";
+			}
+			&:nth-last-of-type:after {
+				display: none;
+			}
+		}
 	}
 }
 .article {
