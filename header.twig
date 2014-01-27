@@ -30,9 +30,7 @@
 		<div class="row">
 			<header class="header span-4">
 				<div class="logo-title">
-					<a href="#" title="{{ site.title }}">
-						<img src="{{ asset('assets/avatar.png') }}" />
-					</a>
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/avatar.png')})|raw}}
 					<h1>{{widget('companyname', 'companyname', {"business": "Monday"})|raw}}</h1>
 				</div>
 				<nav class="nav">
