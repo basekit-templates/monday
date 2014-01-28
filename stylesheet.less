@@ -297,6 +297,10 @@ small {
 		column-count: 1;
 	}
 }
+.widget.contactform fieldset input, .widget.contactform fieldset textarea {
+	border: 1px solid @color-swatch1;
+	box-shadow: 1px 1px 0 @color-swatch4;
+}
 // Reponsive
 @media (max-width: 767px) {
 	.left, .right {
@@ -331,8 +335,12 @@ small {
 		float: right;
 		padding-left: 20px;
 		padding-bottom: 20px;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		width: auto;
 	}
-	.blog-post-content {
+	.blog-post-content, .blog-post-item.has-image .blog-post-summary, .blog-post-item.has-image h2, .blog-post-item.has-image .blog-post-content {
 		padding-right: 0;
 	}
 	.blog-post-item.has-image .blog-post-publish-date {
