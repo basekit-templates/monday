@@ -297,7 +297,7 @@ small {
 		column-count: 1;
 	}
 }
-.widget.contactform fieldset input, .widget.contactform fieldset textarea {
+.widget.contactform fieldset input, .widget.contactform fieldset textarea, input[type=""] {
 	border: 1px solid @color-swatch1;
 	box-shadow: 1px 1px 0 @color-swatch4;
 }
@@ -339,8 +339,11 @@ small {
 		right: auto;
 		bottom: auto;
 		width: auto;
+		img {
+			display: block;
+		}
 	}
-	.blog-post-content, .blog-post-item.has-image .blog-post-summary, .blog-post-item.has-image h2, .blog-post-item.has-image .blog-post-content {
+	.blog-post-content, .blog-post-item.has-image .blog-post-summary, .blog-post-item.has-image h2, .blog-post-item.has-image .blog-post-content, .blog-post-item.has-image .blog-post-body {
 		padding-right: 0;
 	}
 	.blog-post-item.has-image .blog-post-publish-date {
