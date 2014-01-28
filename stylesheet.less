@@ -301,6 +301,16 @@ small {
 	border: 1px solid @color-swatch1;
 	box-shadow: 1px 1px 0 @color-swatch4;
 }
+.blog-list-footer {
+	clear: both;
+	&:after, &:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
 // Reponsive
 @media (max-width: 767px) {
 	.left, .right {
