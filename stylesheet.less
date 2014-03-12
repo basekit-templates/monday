@@ -49,6 +49,7 @@ body {
 	}
 }
 .footer {
+	margin-top:15px;
 	clear: both;
 	text-align: center;
 	> p a {
@@ -60,7 +61,7 @@ body {
 		color: @color-swatch1;
 		font-size: inherit;
 	}
-	p {
+	p, span {
 		color: @color-swatch4;
 		text-shadow: 0 1px 0 @color-swatch7;
 	}
@@ -284,7 +285,11 @@ small {
 	position: relative;
 	width: 100%;
 }
+.menu-item-image {
+	display:none;
+}
 .menu-item-image-wrap {
+	height:150px;
 	background-size: cover;
 	background-position: center center;
 }
