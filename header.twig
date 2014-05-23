@@ -10,9 +10,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-
 	{% if site.favicon %}
 		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
 		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
@@ -30,14 +27,13 @@
 		<div class="row">
 			<header class="header span-4">
 				<div class="logo-title">
-					{{widget('logo', 'logo', {"defaultlogo": asset('images/avatar.png')})|raw}}
+					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 					<h1>{{widget('companyname', 'companyname', {"business": "Monday"})|raw}}</h1>
 				</div>
 				<nav class="nav">
 					{{widget('extendednavigation', 'navigationheader', {})|raw}}
 				</nav>
 				<aside class="aside">
-					<h3>{{widget('content', 'about-title', {content: 'About me', lines: 'all'})|raw}}</h3>
 					{{widget('content', 'about-content', {content: '<p>Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus.</p>', lines: 'all'})|raw}}
 					<div class="social">
 						{{widget('profile', 'footercolumn1socialicons', { 'profileType' : 'socialicons' })|raw}}
