@@ -1,44 +1,15 @@
-<!doctype html>
-<html lang="{{ page.seoLang }}">
-<head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }}</title>
-
-	<meta name="keywords" content="{{ page.keywords }}" />
-	<meta name="description" content="{{ page.description }}" />
-	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-
-	{% if site.favicon %}
-		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-	{% endif %}
-
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	{% include basekit.headScript %}
-</head>
-
-<body class="{{ page.backgroundClass }}">
-	<div class="container">
-		<div class="row">
-			<header class="header span-4">
-				<div class="logo-title">
-					{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-					<h1>{{widget('companyname', 'companyname', {"business": "Monday"})|raw}}</h1>
-				</div>
-				<nav class="nav">
-					{{widget('extendednavigation', 'navigationheader', {})|raw}}
-				</nav>
-				<aside class="aside">
-					{{widget('content', 'about-content', {content: '<p>Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus.</p>', lines: 'all'})|raw}}
-					<div class="social">
-						{{widget('profile', 'footercolumn1socialicons', { 'profileType' : 'socialicons' })|raw}}
-					</div>
-				</aside>
-			</header>
-			
-			<section class="section span-8">
+<header class="header span-4">
+	<div class="logo-title">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		<h1>{{widget('companyname', 'companyname', {"business": "Monday"})|raw}}</h1>
+	</div>
+	<nav class="nav">
+		{{widget('extendednavigation', 'navigationheader', {})|raw}}
+	</nav>
+	<aside class="aside">
+		{{widget('content', 'about-content', {content: '<p>Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus. Donec sagittis, nibh ut dapibus convallis, turpis leo scelerisque lectus, nec bibendum libero sem id urna. Cras ut hendrerit nunc. Etiam ut viverra lacus.</p>', lines: 'all'})|raw}}
+		<div class="social">
+			{{widget('profile', 'footercolumn1socialicons', { 'profileType' : 'socialicons' })|raw}}
+		</div>
+	</aside>
+</header>

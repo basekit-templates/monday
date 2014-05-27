@@ -1,7 +1,8 @@
-{% include "header.twig" %}
+{% extends "layout.twig" %}
+{% block content %}
 
-<article class="article home-page">
+<section class="home-page">
 	{{zone('main')|raw}}
-</article>
+</section>
 
-{% include "footer.twig" %}
+{% endblock %}
