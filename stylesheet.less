@@ -716,12 +716,19 @@ input[type="search"]::-webkit-search-decoration {
 	margin: 0 0 20px 0;
 	.menu-subsection-wrapper {
 		padding: 10px 15px;
-		background-color: lighten(@color-swatch1, 55%);
+		background-color: lighten(@color-swatch2, 55%);
 		&.menu-subsection-promoted {
-			background-color: lighten(@color-swatch1, 50%);
-			border: 1px solid lighten(@color-swatch1, 45%);
+			border: 1px solid lighten(@color-swatch2, 45%);
 		}
 
+	}
+}
+
+.menu-item-promoted {
+	background-color: lighten(@color-swatch2, 55%);
+	border: 1px solid lighten(@color-swatch2, 45%);	
+	.inner-item {
+		padding: 10px 15px;
 	}
 }
 
