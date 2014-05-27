@@ -234,8 +234,6 @@ a {
 
 
 .nav {
-	float: left;
-	padding-bottom: 20px;
 	li, .widget .extendednavigation ul li {
 		border-bottom: 1px solid darken(@color-swatch7, 5%);
 		margin-left: 0;
@@ -285,9 +283,10 @@ a {
 		display: inline-block;
 	}
 }
-.widget.content {
+
+.aside {
+	padding-top: 20px;
 	clear: both;
-	padding-bottom: 20px;
 }
 
 /* ===============================
@@ -644,6 +643,7 @@ input[type="search"]::-webkit-search-decoration {
 // Blog
 
 .blog-post-list .blog-post-feature-image-wrap {
+	border: none;
 	position: absolute;
 	width: 50%;
 	top: 0;
@@ -733,11 +733,15 @@ input[type="search"]::-webkit-search-decoration {
 	padding-bottom: 20px;
 }
 
+.widget.ecombasket .ecombasket-list-container ul li {
+	margin: 0;
+}
+
 /* ===============================
    6. RESPONSIVE
    =============================== */
 
-@media (max-width: 767px) {
+@media @tablet {
 	.left, .right {
 		text-align: left;
 		float: none;
@@ -756,7 +760,8 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.widget .extendednavigation ul {
-		display: block;
+		padding-top: 0;
+		position: relative;
 		li {
 			padding: 0;
 			&:hover ul {
@@ -764,19 +769,19 @@ input[type="search"]::-webkit-search-decoration {
 			}
 		}
 	}
+	.widget .extendednavigation a.pull:after {
+		top: 8px;
+		right: 8px;
+	}
 	.blog-post-feature-image-wrap {
 		background-image: none;
 		position: relative;
-		float: right;
 		padding-left: 20px;
-		padding-bottom: 20px;
+		margin-bottom: 20px;
 		top: auto;
 		right: auto;
 		bottom: auto;
 		width: auto;
-		img {
-			display: block;
-		}
 	}
 	.blog-post-content, .blog-post-item.has-image .blog-post-summary, .blog-post-item.has-image h2, .blog-post-item.has-image .blog-post-content, .blog-post-item.has-image .blog-post-body {
 		padding-right: 0;
@@ -785,9 +790,18 @@ input[type="search"]::-webkit-search-decoration {
 		text-shadow: none;
 		color: @color-swatch4;
 	}
+	.productlist-display-form {
+		label {
+			display: inline-block;
+			width: 19%;
+		}
+		select {
+			width: 80%;
+		}
+	}
 }
 
-@media (max-width: 320px) {
+@media @mobile {
 	.blog-post-feature-image-wrap {
 		display: none;
 	}
@@ -800,6 +814,11 @@ input[type="search"]::-webkit-search-decoration {
 				text-shadow: none;
 				color: @color-swatch4;
 			}
+		}
+	}
+	.productlist-display-form {
+		select, label {
+			width: 100%;
 		}
 	}
 }
