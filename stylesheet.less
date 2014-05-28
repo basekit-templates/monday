@@ -248,6 +248,9 @@ a {
 		list-style: none;
 		overflow: hidden;
 	}
+	.widget .extendednavigation ul li {
+		padding: 5px 0;
+	}
 
 /* ===============================
    3. DROPDOWN
@@ -655,14 +658,6 @@ input[type="search"]::-webkit-search-decoration {
 
 // Blog
 
-.blog-post-list .blog-post-feature-image-wrap {
-	border: none;
-	position: absolute;
-	width: 30%;
-	top: 0;
-	right: -20px;
-	height: 100%;
-}
 h1.blog-post-title {
 	padding-top: 15px;
 }
@@ -710,12 +705,18 @@ h1.blog-post-title {
 
 .blog-post-list .blog-post-item {
 	.blog-post-summary,
-	.blog-post-body {
+	.blog-post-body,
+	.blog-post-title {
 		margin-right: 5%;
 		width: 65%;
 	}
-	.blog-post-title {
+	.blog-post-feature-image-wrap {
+		border: none;
+		position: absolute;
 		width: 30%;
+		top: 0;
+		right: -20px;
+		height: 100%;
 	}
 }
 
@@ -723,6 +724,14 @@ h1.blog-post-title {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.menu ol {
+	list-style: none;
+	li {
+		margin-left: 0;
+		margin-bottom: 10px;
+	}
 }
 
 .menu .menu-items li {
@@ -787,12 +796,18 @@ h1.blog-post-title {
 			margin: 0 auto;
 		}
 	}
+	.nav .widget .extendednavigation ul li:hover ul {
+		min-height: 35px;
+		li:last-child {
+			border-bottom: 1px solid darken(@color-swatch7, 5%);
+		}
+	}
 	.widget .extendednavigation ul {
+		background: transparent;
 		padding-top: 0;
 		position: relative;
 		top: 20px;
 		li {
-			padding: 10px 0;
 			&:hover ul {
 				margin: 0;
 			}
@@ -800,21 +815,30 @@ h1.blog-post-title {
 	}
 	.widget .extendednavigation a.pull {
 		display: block;
-		left: 47%;
+		left: 50%;
 		height: 20px;
+		margin-left: -14px;
 		top: 0;
 		width: 28px;
+	}
+	.blog-post-list .blog-post-item {
+	.blog-post-summary,
+	.blog-post-body,
+	.blog-post-title {
+		width: 100%;
 	}
 	.blog-post-feature-image-wrap {
 		background-image: none;
 		position: relative;
 		padding-left: 20px;
 		margin-bottom: 20px;
+		min-height: 200px;
 		top: auto;
 		right: auto;
 		bottom: auto;
-		width: auto;
+		width: 100%;
 	}
+}
 	.blog-post-content, .blog-post-item.has-image .blog-post-summary, .blog-post-item.has-image h2, .blog-post-item.has-image .blog-post-content, .blog-post-item.has-image .blog-post-body {
 		padding-right: 0;
 	}
