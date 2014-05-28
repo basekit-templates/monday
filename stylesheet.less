@@ -483,6 +483,15 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // 9. Gallery / Images / Slideshow
+
+.widget.feature .feature-bgimg .content .spare {
+	padding: 30px;
+}
+
+.widget.feature h2, .widget.feature h3  {
+	color: @color-swatch7;
+}
+
 .widget.gallery {
 	margin: 0;
 	li {
@@ -510,11 +519,11 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.btn-next:before {
-		border-left-color: @color-swatch1;
+		border-left-color: lighten(@color-swatch1, 50%);
 		left: 13px;
 	}
 	.btn-prev:before {
-		border-right-color: @color-swatch1;
+		border-right-color: lighten(@color-swatch1, 50%);
 		left: 6px;
 	}
 	li {
@@ -649,12 +658,14 @@ input[type="search"]::-webkit-search-decoration {
 .blog-post-list .blog-post-feature-image-wrap {
 	border: none;
 	position: absolute;
-	width: 50%;
+	width: 30%;
 	top: 0;
 	right: -20px;
 	height: 100%;
 }
-
+h1.blog-post-title {
+	padding-top: 15px;
+}
 .blog-post-publish-date, .blog-post-published-date {
 	float: right;
 	color: @color-swatch4;
@@ -689,7 +700,7 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 .blog-post-item, .blogpost-page {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	position: relative;
 }
 .blogpost-page, .bloglist-page .blog-post-item {
@@ -698,12 +709,15 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .blog-post-list .blog-post-item {
-	.blog-post-title,
-	.blog-post-summary {
-		width: 50%;
+	.blog-post-summary,
+	.blog-post-body {
+		margin-right: 5%;
+		width: 65%;
+	}
+	.blog-post-title {
+		width: 30%;
 	}
 }
-
 
 .blog-post-published-date {
 	position: absolute;
@@ -753,6 +767,9 @@ input[type="search"]::-webkit-search-decoration {
    =============================== */
 
 @media @tablet {
+	header p {
+		padding-top: 10px;
+	}
 	.left, .right {
 		text-align: left;
 		float: none;
@@ -773,16 +790,20 @@ input[type="search"]::-webkit-search-decoration {
 	.widget .extendednavigation ul {
 		padding-top: 0;
 		position: relative;
+		top: 20px;
 		li {
-			padding: 0;
+			padding: 10px 0;
 			&:hover ul {
 				margin: 0;
 			}
 		}
 	}
-	.widget .extendednavigation a.pull:after {
-		top: 8px;
-		right: 8px;
+	.widget .extendednavigation a.pull {
+		display: block;
+		left: 47%;
+		height: 20px;
+		top: 0;
+		width: 28px;
 	}
 	.blog-post-feature-image-wrap {
 		background-image: none;
