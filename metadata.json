@@ -3,7 +3,6 @@
 	"thumbnail":"monday.png",
 	"screenshot":"monday.png",
 	"templateType":"blog",
-    "pageTypes":["default","home","blogpost","blogpostlist"],
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
