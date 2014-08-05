@@ -667,13 +667,22 @@ input[type="search"]::-webkit-search-decoration {
 h1.blog-post-title {
 	padding-top: 15px;
 }
-.blog-post-publish-date, .blog-post-published-date {
-	float: right;
-	color: @color-swatch7;
-	z-index: 1;
-	position: relative;
-	text-shadow: 0 0 3px darken(@color-swatch1, 5%), 0 0 2px darken(@color-swatch1, 5%);
+
+.has-image {
+	.blog-post-publish-date, .blog-post-published-date {
+		float: right;
+		color: @color-swatch7;
+		z-index: 1;
+		position: relative;
+		text-shadow: 0 0 3px darken(@color-swatch1, 5%), 0 0 2px darken(@color-swatch1, 5%);
+		position: absolute;
+		bottom: 5px;
+		right: 10px;
+	}
 }
+
+
+
 .blog-post-date {
 	font-size: inherit;
 }
@@ -725,12 +734,6 @@ h1.blog-post-title {
 		right: 0;
 		height: 100%;
 	}
-}
-
-.blog-post-published-date {
-	position: absolute;
-	bottom: 5px;
-	right: 10px;
 }
 
 .menu ol {
