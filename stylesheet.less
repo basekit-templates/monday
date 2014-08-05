@@ -14,7 +14,7 @@ body {
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
+		box-sizing: border-box;
 }
 
 /* ===============================
@@ -669,10 +669,10 @@ h1.blog-post-title {
 }
 .blog-post-publish-date, .blog-post-published-date {
 	float: right;
-	color: @color-swatch4;
+	color: @color-swatch7;
 	z-index: 1;
 	position: relative;
-	text-shadow: 0 0 3px @color-swatch7, 0 0 2px @color-swatch7;
+	text-shadow: 0 0 3px darken(@color-swatch1, 5%), 0 0 2px darken(@color-swatch1, 5%);
 }
 .blog-post-date {
 	font-size: inherit;
@@ -722,15 +722,15 @@ h1.blog-post-title {
 		position: absolute;
 		width: 30%;
 		top: 0;
-		right: -20px;
+		right: 0;
 		height: 100%;
 	}
 }
 
 .blog-post-published-date {
 	position: absolute;
-	bottom: 0;
-	right: 0;
+	bottom: 5px;
+	right: 10px;
 }
 
 .menu ol {
