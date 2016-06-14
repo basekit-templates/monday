@@ -1,7 +1,7 @@
 {
 	"name":"Monday",
 	"thumbnail":"monday.png",
-	"screenshot":"monday.png",
+	"screenshot":"monday-screenshot.jpg",
 	"templateType":"blog",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
