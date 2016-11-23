@@ -129,7 +129,10 @@ h6 {
 p,
 .contactform label,
 .twitter ul li a,
-.signupform label {
+.signupform label,
+.widget.contactform fieldset label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	color:@font-swatch5-color;
@@ -314,6 +317,7 @@ a {
 
 // Buttons
 .contactform button.btn,
+.advancedcontactform fieldset button,
 button.btn,
 .btn,
 .widget.profile form button,
@@ -491,6 +495,11 @@ input[type="search"]::-webkit-search-decoration {
 :-ms-input-placeholder {
 	color: darken(@color-swatch7, 30%);
 }
+
+.advancedcontactform .option-list {
+	padding: 1em 0;
+}
+
 
 // 9. Gallery / Images / Slideshow
 
