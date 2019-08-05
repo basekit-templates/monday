@@ -1,5 +1,6 @@
 {
 	"name":"Monday",
+	"versionTenCompatible": 1,
 	"thumbnail":"monday.png",
 	"screenshot":"monday-screenshot.jpg",
 	"templateType":"blog",
