@@ -247,14 +247,19 @@ a {
 		margin-left: 0;
 		width: 100%;
 		background: none;
+		float: none;
 	}
 	a:hover, .nav .widget .extendednavigation ul li .text:hover {
 		text-decoration: none;
 		color: @color-swatch2;
 	}
+	.widget .extendednavigation ul[class*="align-"] {
+		float: none;
+	}
 	ul, .widget .extendednavigation ul {
 		list-style: none;
 		overflow: hidden;
+		width: 100%;
 	}
 	.widget .extendednavigation ul li {
 		padding: 5px 0;
